@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" /><title>Reza Ahmadzadeh</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script type="text/javascript" src="js/wc10.js"></script>
+
+
+<style>
+p {
+  text-align: center;
+  font-size: 20px;
+}
+</style>    
+</head>
+
+<body>
+
+<div id="container">
+    <div id="nav">
+        <div id="logo"><a href="default.htm"><br /></a></div>
+        <ul>
+            <li><a href="index.html">Home</a><span class="nav_text">Welcome</span></li>
+            <li><a href="bio.html">Short Bio</a><span class="nav_text">About</span></li>
+            <li><a href="publications.html">Publications</a><span class="nav_text">Publication list & Pdfs </span></li>
+            <!-- <li><a href="research.html">Research</a><span class="nav_text">Research and Projects</span></li> -->
+            <li><a href="teaching.html">Teaching</a><span class="nav_text">Computer Science & Robotics </span></li>
+        </ul>
+    </div> <!-- close nav -->
+    
+    <div id="left">
+    <h2> Upcoming deadlines: </h2>
+    <br />
+    <h3>IJCAI-2018:</h3> <p id="ijcai2018"></p>
+    <h3>RSS-2018:</h3> <p id="rss2018"></p>
+    <h3>ICML-2018:</h3> <p id="icml2018"></p>
+    <h3>IROS-2018:</h3> <p id="iros2018"></p>
+    <h3>ICRA-2018:</h3> <p id="icra2018"></p>
+
+    <script>
+    function setTimer(elem_id, date) {
+    // set the date we're counting down to
+        var target_date = new Date(date).getTime();
+        // variables for time units
+        var days, hours, minutes, seconds;
+        // get tag element
+
+        var countDownElem = document.getElementById(elem_id);
+        //update the tag with id "countdown" every 1 second
+        setInterval(function () {
+           // find the amount of "seconds" between now and target
+          var current_date = new Date().getTime();
+          var seconds_left = (target_date - current_date) / 1000;
+          // do some time calculations
+          days = parseInt(seconds_left / 86400);
+          seconds_left = seconds_left % 86400;
+          hours = parseInt(seconds_left / 3600);
+          seconds_left = seconds_left % 3600;
+          minutes = parseInt(seconds_left / 60);
+          seconds = parseInt(seconds_left % 60);
+          // format countdown string + set tag value
+          countDownElem.innerHTML = days + " D : " + hours + " H : " + minutes + " M : " + seconds + " S";
+        }, 1000);
+       }
+    setTimer("rss2018","Feb 1, 2018");
+    setTimer("icml2018","Feb 9, 2018");
+    setTimer("iros2018","Mar 1, 2018");
+    setTimer("icra2018","Sep 10, 2018");
+    setTimer("ijcai2018","Jan 31, 2018");
+    
+    
+    </script>
+
+    
+        
+
+        <div id="body">
+
+        <br>
+
+    </div>
+</div>    
+</body></html>
